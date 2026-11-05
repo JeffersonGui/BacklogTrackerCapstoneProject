@@ -1,0 +1,31 @@
+# Python virtual environments
+nvenv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Django local database
+db.sqlite3
+db.sqlite3-journal
+
+# Django and environment secrets
+.env
+.env.*
+!.env.example
+
+# Node.js dependencies
+node_modules/
+
+# React/Vite build output
+dist/
+
+# Editor and system files
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+
+# Local Figma files
+.figma/
