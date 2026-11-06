@@ -1,3 +1,4 @@
+/*
 import { useEffect, useMemo, useState } from "react";
 import { getCurrentUser, signIn, signOut, signUp, type User } from "./api";
 
@@ -231,7 +232,7 @@ export default function App() {
   useEffect(() => { getCurrentUser().then(u => { setUser(u); setCheckingSession(false); }); }, []);
 
   const handleSignOut = async () => {
-    try { await signOut(); } catch { /* signed out locally even if Django is unreachable */ }
+    try { await signOut(); } catch {  } // signed out locally even if Django is unreachable //comment here should be in the curly braces
     setUser(null); setProfileOpen(false); setPublicView("main");
   };
 
@@ -338,3 +339,4 @@ export default function App() {
     </div>
   );
 }
+*/
