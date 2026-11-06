@@ -1,4 +1,3 @@
-/*
 import { useEffect, useMemo, useState } from "react";
 import { getCurrentUser, signIn, signOut, signUp, type User } from "./api";
 
@@ -339,4 +338,3 @@ export default function App() {
     </div>
   );
 }
-*/
