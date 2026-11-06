@@ -232,7 +232,11 @@ export default function App() {
   useEffect(() => { getCurrentUser().then(u => { setUser(u); setCheckingSession(false); }); }, []);
 
   const handleSignOut = async () => {
+<<<<<<< HEAD
     try { await signOut(); } catch {  } // signed out locally even if Django is unreachable     //Comment here should be in curly braces
+=======
+    try { await signOut(); } catch {  } // signed out locally even if Django is unreachable //comment here should be in the curly braces
+>>>>>>> f648591ce5cd3ecce09e8d9d87e28d2427fa3df2
     setUser(null); setProfileOpen(false); setPublicView("main");
   };
 

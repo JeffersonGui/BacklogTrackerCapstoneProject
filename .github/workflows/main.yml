@@ -1,4 +1,4 @@
-# Comment, add more later, just establishing I can add a workflow/CI-CD pipeline
+# Comment to update this here because apparently that's what it takes for github to recognize my pushes
 name: CSC325 CI/CD pipeline for Capstone Project.
 
 on:
@@ -46,6 +46,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run tests
+        working-directory: ./backend
         run: python manage.py test -v 2
 
   deploy:

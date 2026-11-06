@@ -21,4 +21,8 @@
   },
   "include": ["src", "vite.config.ts"]
 }
+<<<<<<< HEAD
 //Edited lines 9 and 18 to make them comments to remove issues with the tsconfig.json file.
+=======
+//lines in comments to remove errors
+>>>>>>> f648591ce5cd3ecce09e8d9d87e28d2427fa3df2

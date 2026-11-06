@@ -18,12 +18,20 @@ class AccountApiTests(TestCase):
         # enforce_csrf_checks=True makes the test behave like a real browser.
         self.client = Client(enforce_csrf_checks=True)
         self.client.get("/api/csrf/")
-        self.token = self.client.cookies["csrftoken"].value
+        # self.token = self.client.cookies["csrftoken"].value
+        # The above line is commented out because it was causing an error. 
 
     def post(self, url, data):
         return self.client.post(
-            url, json.dumps(data), content_type="application/json", HTTP_X_CSRFTOKEN=self.token
+            url, 
+            json.dumps(data), 
+            content_type="application/json", 
+            HTTP_X_CSRFTOKEN=self.client.cookies["csrftoken"].value,
+            # HTTP_X_CSRFTOKEN=self.token
+            # The above line is commented out because it was causing an error, was advised by Claude to use the non-comment line above instead.
         )
+
+
 
     def signup(self, email="sam@example.com", password="Backlog-Hero-42", username="sam"):
         return self.post("/api/signup/", {"email": email, "password": password, "username": username})
