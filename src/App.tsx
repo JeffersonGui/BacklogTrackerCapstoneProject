@@ -20,7 +20,7 @@ const images = {
   city: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85",
   tower: "https://images.unsplash.com/photo-1535391879778-3bae11d29a24?auto=format&fit=crop&w=900&q=85",
 };
-
+// The above and the below are placeholders, definitely need to replace with actual game data and images via IGDB API.
 const initialGames: Game[] = [
   { id: 1, title: "Echoes of Orion", genre: "Sci-fi RPG", platform: "PC", progress: 68, hours: 32, status: "Playing", image: images.neon, color: "#5d46e8", score: 4.8 },
   { id: 2, title: "Midnight Circuit", genre: "Racing", platform: "PS5", progress: 34, hours: 14, status: "Playing", image: images.night, color: "#e84f8a", score: 4.6 },
