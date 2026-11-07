@@ -2,8 +2,8 @@ import { defineConfig, type HtmlTagDescriptor, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
-
-import siteConfiguration from './.figma/make/site.json'
+// commented out lines 6 and 23 due to causing build errors.
+//import siteConfiguration from './.figma/make/site.json'
 
 
 // Vite config — https://vitejs.dev/config/
@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
 react(),
       tailwindcss(),
-      figmaSiteConfiguration(siteConfiguration),
+      //figmaSiteConfiguration(siteConfiguration),
       figmaErrorOverlayReplay(),
       figmaReactRefreshBoundaryFallback(),
       figmaMakeKitPlugin({ storiesGlob: '/src/**/*.stories.{ts,tsx,js,jsx}' }),
